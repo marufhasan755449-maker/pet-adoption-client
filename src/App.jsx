@@ -28,7 +28,6 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
 
-            {/* Private Routes */}
             <Route
               path="pets/:id"
               element={

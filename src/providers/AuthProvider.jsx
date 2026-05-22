@@ -20,33 +20,33 @@ export const AuthProvider = ({ children }) => {
 
   const googleProvider = new GoogleAuthProvider();
 
-  // Register with email & password
+  
   const register = (email, password) =>
     createUserWithEmailAndPassword(auth, email, password);
 
-  // Update display name + photo
+  
   const updateUserProfile = (name, photoURL) =>
     updateProfile(auth.currentUser, { displayName: name, photoURL });
 
-  // Login
+  
   const login = (email, password) =>
     signInWithEmailAndPassword(auth, email, password);
 
-  // Google Login
+  
   const googleLogin = () => signInWithPopup(auth, googleProvider);
 
-  // Logout
+  
   const logout = async () => {
     await axios.post(`${API}/auth/logout`, {}, { withCredentials: true });
     return signOut(auth);
   };
 
-  // Issue JWT on auth state change
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
-        // Issue JWT token
+
         await axios.post(
           `${API}/auth/jwt`,
           { email: currentUser.email },
@@ -71,7 +71,6 @@ export const AuthProvider = ({ children }) => {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
-// Custom hook
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) throw new Error("useAuth must be used inside AuthProvider");
