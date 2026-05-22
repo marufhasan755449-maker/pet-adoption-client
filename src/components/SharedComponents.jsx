@@ -1,4 +1,4 @@
-// ── PetCard ──────────────────────────────────────────────
+
 import { Link } from "react-router-dom";
 
 export const PetCard = ({ pet }) => {
@@ -24,7 +24,7 @@ export const PetCard = ({ pet }) => {
             {species}
           </span>
         </div>
-        <p className="text-sm text-gray-500 mb-1">🐾 {breed}</p>
+        <p className="text-sm text-gray-500 mb-1">{breed}</p>
         <p className="text-sm font-semibold text-orange-500 mb-3">
           Fee: ৳{fee || "Free"}
         </p>
@@ -39,14 +39,12 @@ export const PetCard = ({ pet }) => {
   );
 };
 
-// ── LoadingSpinner ────────────────────────────────────────
 export const LoadingSpinner = () => (
   <div className="flex justify-center items-center min-h-[300px]">
     <div className="w-14 h-14 border-4 border-orange-400 border-t-transparent rounded-full animate-spin" />
   </div>
 );
 
-// ── DeleteModal ───────────────────────────────────────────
 export const DeleteModal = ({ isOpen, onClose, onConfirm, petName }) => {
   if (!isOpen) return null;
   return (

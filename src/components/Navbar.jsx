@@ -70,9 +70,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl">🐾</span>
-          <span className="text-xl font-bold text-orange-500">PawsHome</span>
-        </Link>
+  <img
+    src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=40&h=40&fit=crop"
+    alt="logo"
+    className="w-9 h-9 rounded-full object-cover border-2 border-orange-400"
+  />
+  <span className="text-xl font-bold text-orange-500">PawsHome</span>
+</Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-gray-700">

@@ -38,7 +38,7 @@ const SuccessStories = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
           { name: "Rahim & Max", story: "Max found his forever home after 3 months in the shelter. Now they go hiking every weekend!", img: "https://placedog.net/300/200?r=1" },
-          { name: "Nadia & Luna", story: "Luna the cat completely changed Nadia's life. She says she cannot imagine a day without her.", img: "https://placekitten.com/300/200" },
+          { name: "Nadia & Luna", story: "Luna the cat completely changed Nadia's life. She says she cannot imagine a day without her.", img: "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=300&h=200&fit=crop" },
           { name: "Karim & Buddy", story: "Buddy was found on the street. Today he is a certified therapy dog helping children!", img: "https://placedog.net/300/200?r=5" },
         ].map((s) => (
           <div key={s.name} className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
