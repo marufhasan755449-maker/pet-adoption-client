@@ -16,7 +16,7 @@ const Login = () => {
     setLoading(true);
     try {
       await login(form.email, form.password);
-      toast.success("Welcome back! 🐾");
+      toast.success("Welcome back! 🐱");
       navigate(from, { replace: true });
     } catch (err) {
       toast.error(getFirebaseError(err.code));
@@ -46,7 +46,7 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8">
         <div className="text-center mb-8">
-          <div className="text-5xl mb-2">🐾</div>
+          <div className="text-5xl mb-2">🐱</div>
           <h1 className="text-3xl font-extrabold text-gray-800">Welcome Back</h1>
           <p className="text-gray-500 text-sm mt-1">Sign in to your PawsHome account</p>
         </div>

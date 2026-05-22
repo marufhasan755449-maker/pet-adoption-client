@@ -6,7 +6,7 @@ import { DeleteModal } from "../components/SharedComponents";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
-// ── Requests Modal ────────────────────────────────────────
+
 const RequestsModal = ({ petId, petName, onClose }) => {
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -111,7 +111,7 @@ const RequestsModal = ({ petId, petName, onClose }) => {
   );
 };
 
-// ── My Listings Page ──────────────────────────────────────
+
 const MyListings = () => {
   const [pets, setPets] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -167,7 +167,7 @@ const MyListings = () => {
         ))}
       </div>
 
-      {/* Add Pet Button */}
+      
       <div className="flex justify-end mb-4">
         <Link
           to="/add-pet"
@@ -233,7 +233,7 @@ const MyListings = () => {
         </div>
       )}
 
-      {/* Modals */}
+  
       {selectedPet && (
         <RequestsModal
           petId={selectedPet._id}

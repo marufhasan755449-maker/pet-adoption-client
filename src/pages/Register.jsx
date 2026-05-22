@@ -58,7 +58,7 @@ const Register = () => {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8">
         <div className="text-center mb-8">
-          <div className="text-5xl mb-2">🐾</div>
+          <div className="text-5xl mb-2">🐱</div>
           <h1 className="text-3xl font-extrabold text-gray-800">Create Account</h1>
           <p className="text-gray-500 text-sm mt-1">
             Join PawsHome and find your furry companion
@@ -149,7 +149,7 @@ const Register = () => {
             disabled={loading}
             className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-xl transition text-base disabled:opacity-50 mt-2"
           >
-            {loading ? "Creating account..." : "Create Account 🐾"}
+            {loading ? "Creating account..." : "Create Account 🐱"}
           </button>
         </form>
 

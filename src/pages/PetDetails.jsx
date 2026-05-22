@@ -120,7 +120,7 @@ const PetDetails = () => {
               onClick={() => setShowForm(!showForm)}
               className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-xl transition text-lg"
             >
-              🐾 {showForm ? "Close Form" : "Request Adoption"}
+              🐱 {showForm ? "Close Form" : "Request Adoption"}
             </button>
           )}
 
@@ -132,7 +132,7 @@ const PetDetails = () => {
         </div>
       </div>
 
-      {/* Adoption Form */}
+    
       {showForm && (
         <div className="mt-8 bg-white rounded-3xl shadow-xl p-8 max-w-xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">

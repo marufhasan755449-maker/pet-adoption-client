@@ -29,7 +29,7 @@ const AllPets = () => {
 
   useEffect(() => {
     fetchPets();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [search, selectedSpecies, sort]);
 
   const toggleSpecies = (s) => {
@@ -41,12 +41,12 @@ const AllPets = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-        🐾 All Available Pets
+        🐱 All Available Pets
       </h1>
 
-      {/* Filters */}
+      
       <div className="bg-white rounded-2xl shadow p-5 mb-8 flex flex-col md:flex-row gap-4 items-start md:items-center">
-        {/* Search */}
+        
         <input
           type="text"
           placeholder="🔍 Search by name..."
@@ -55,7 +55,7 @@ const AllPets = () => {
           className="border rounded-xl px-4 py-2 text-sm w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-orange-300"
         />
 
-        {/* Species Filter */}
+      
         <div className="flex flex-wrap gap-2">
           {SPECIES.map((s) => (
             <button
@@ -72,7 +72,7 @@ const AllPets = () => {
           ))}
         </div>
 
-        {/* Sort */}
+    
         <select
           value={sort}
           onChange={(e) => setSort(e.target.value)}
@@ -85,7 +85,7 @@ const AllPets = () => {
         </select>
       </div>
 
-      {/* Results */}
+  
       {loading ? (
         <LoadingSpinner />
       ) : pets.length === 0 ? (

@@ -5,12 +5,11 @@ import { PetCard, LoadingSpinner } from "../components/SharedComponents";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
-// ── Section Components ────────────────────────────────────
 const WhyAdopt = () => (
   <section className="py-16 bg-orange-50">
     <div className="max-w-7xl mx-auto px-4">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
-        Why Adopt a Pet? 🐾
+        Why Adopt a Pet? 🐱
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
@@ -122,7 +121,6 @@ const HappyFamilies = () => (
   </section>
 );
 
-// ── Home Page ─────────────────────────────────────────────
 const Home = () => {
   const [featuredPets, setFeaturedPets] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -137,7 +135,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero */}
+      
       <section
         className="relative bg-gradient-to-br from-orange-400 to-orange-600 text-white py-28 px-4"
         style={{
@@ -151,7 +149,7 @@ const Home = () => {
         <div className="relative max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
             Find Your Perfect <br />
-            <span className="text-yellow-300">Furry Friend 🐾</span>
+            <span className="text-yellow-300">Furry Friend 🐱</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-orange-100">
             Thousands of animals are waiting for a loving home. Adopt, don't
